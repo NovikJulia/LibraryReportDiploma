@@ -16,6 +16,17 @@ namespace LibraryReport.Controllers
             ViewBag.Books = books;
             return View();
         }
+        [HttpPost]
+        public string PostBook(string title, string author)
+        {
+            return title + " " + author;
+        }
+        [HttpGet]
+        public ActionResult GetBook()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Read(int id)
         {
